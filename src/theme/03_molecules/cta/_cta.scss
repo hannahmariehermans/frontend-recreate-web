@@ -1,0 +1,42 @@
+.cta{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: calc(#{$gap} * 18);
+}
+
+
+@media screen and (min-width: map-get($sections, 7)) {
+    /* Styles for desktop and larger screens */
+
+    .cta {
+        display: flex;
+        flex-direction: row;
+        align-items: unset;
+        justify-content: unset;
+        gap: unset;
+
+        background: map-get($colors, 'cta-bg' ); 
+        border-radius: $border-radius;
+        border: 1px;
+
+        padding: map-get($space, 'lg' ) 0 0 map-get($space, 'lg' );
+
+        .main{
+            text-align: unset;
+            padding-right: 80px;
+        }
+    }
+
+    .cta-visual{
+        display: flex;
+        align-self:end;
+    }
+    
+    .cta-visual img{
+        border-radius: 0 0 $border-radius 0;
+        border: 1px;
+    }
+}
+    

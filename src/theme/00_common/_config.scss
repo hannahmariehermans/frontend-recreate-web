@@ -1,0 +1,120 @@
+$colors: (
+    'neutrals-0':   #ffffff,
+    'neutrals-1':   #EFEFEF,
+    'neutrals-2':   #D0D0D0,
+    'neutrals-3':   #CCCCCC,
+    'neutrals-4':   #BFBFBF,
+    'neutrals-5':   #B2B2B2,
+    'neutrals-6':   #A5A5A5,
+    'neutrals-7':   #999999,
+    'neutrals-8':   #5C5C5C,
+    'neutrals-9':   #000000,
+
+    'brand-0':      #181818,
+    'brand-1':      #4452FE,
+    'brand-1-light':#5361fd,
+
+    'cta-bg':        #343434,
+
+    'primary':      #000000,
+    'secondary':    #5C5C5C,
+
+    'text-dark':    #000000,
+    'text-medium':  #5C5C5C,
+    'text-light':   #ffffff,
+);
+
+$font-family: 'Rubik', sans-serif;
+
+$fontWeights: (
+    'light':        lighter,
+    'medium':       normal,
+    'bold':         bold,
+);
+
+
+$fontSizes: (
+    'xsmall':       12px,
+    'small':        14px,
+    'normal':       16px,
+    'large':        18px,
+    'xlarge':       24px,
+
+    'headline':     80px,
+    'mheadline':    52px,    
+    'title':        20px,
+    'subheading':   20px,
+
+    // these are all p-tags witch class
+    'button':       17px,
+    'subtitle':     16px,
+    'paragraphe':   16px,
+    'link':         16px,
+    'm_menu':       30px,
+);
+
+
+$sections: (
+    0:      240px,
+    1:      350px,
+    2:      420px,
+    3:      536px,
+    4:      768px,
+    5:      850px,
+    6:      980px,    
+    7:      1100px,
+    8:      1024px,
+    9:      1300px,
+    10:      1840px,
+);
+
+$gap:   4px;
+
+$max-width: 1440px;
+
+$border-radius:     10px;
+
+$space: (
+    'xxl':   52px,
+    'xl':    36px,           
+    'lg':    32px,  
+    'md':    20px,
+    'sm':    12px,
+    'xs':    10px,           
+);
+
+body{
+    background: map-get($map: $colors, $key: 'brand-0');
+    font-family: $font-family;
+    box-sizing: border-box; 
+    max-width: 100%;
+    overflow-x: hidden;
+    min-width: auto;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.container {
+    margin: 0 64px ;
+}
+  
+@media screen and (min-width: map-get($sections, 7)) {
+    /* Styles for desktop and larger screens */
+    
+        .container{
+            margin: 0 120px;
+        }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+

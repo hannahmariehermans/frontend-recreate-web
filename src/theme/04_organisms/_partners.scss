@@ -1,0 +1,13 @@
+.partners{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+
+    .partner-icons{
+        margin: map-get($space, 'lg') 0 ;
+    }
+    
+}

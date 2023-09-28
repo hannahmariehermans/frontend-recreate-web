@@ -1,0 +1,82 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: calc(#{$gap} * 12);
+
+
+    .tags {
+        display: flex;
+        flex-direction: column;
+        gap: calc(#{$gap} * 10);
+
+        div h3 {
+            margin-bottom: map-get($space, 'xl');
+        }
+    }
+
+
+    .information {
+        display: flex;
+        flex-direction: column;
+
+        .contact {
+            display: flex;
+            flex-direction: row;
+            gap: calc(#{$gap} * 3);
+
+            align-items: center;
+
+        }
+
+        .socials {
+            display: flex;
+            flex-direction: row;
+            gap: calc(#{$gap} * 6);
+            margin-top: map-get($space, 'md');
+
+        }
+
+        img {
+            height: 32px;
+        }
+    }
+}
+
+.tags .font-link a:hover{
+    text-decoration: underline;
+}
+
+
+@media screen and (min-width: map-get($sections, 4)) {
+    /* Styles for tablets and larger screens */
+
+    footer .tags{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    footer .information{
+        align-items: center;
+    }
+
+}
+
+@media screen and (min-width: map-get($sections, 7)) {
+    /* Styles for tablets and larger screens */
+
+    footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+    footer .tags{
+        gap: calc(#{$gap} * 30);
+    }
+
+    footer .information{
+        align-items: start;
+    }
+}

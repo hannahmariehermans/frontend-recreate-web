@@ -1,0 +1,95 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    min-height: 8vh;
+    background: map-get($map: $colors, $key: 'brand-0');
+    margin: 30px 54px;
+
+
+    .logo {
+        order: 1;
+        width: 75%;
+    }
+
+    .button {
+        order: 2;
+        width: auto;
+    }
+
+}
+
+.nav-links {
+    display: none;
+}
+
+.nav-active {
+    position: absolute;
+    background: map-get($map: $colors, $key: 'brand-0');
+    right: 0px;
+    padding: 0px;
+    height: 100vh;
+    top: 8vh;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: map-get($colors, 'brand-0');
+    transform: translateX(0%);
+    transition: transform 0.3s ease-in;
+    z-index: 1;
+
+    li{
+        margin-bottom: 125px;
+    }
+}
+
+.nav-links li {
+    list-style-type: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+}
+
+.nav-links a:hover{
+    text-decoration: underline;
+}
+
+
+@media screen and (min-width: map-get($sections, 7)) {
+    nav {
+        // margin: 20px 54px;
+        display: flex;
+        justify-content: space-between;
+
+        .logo {
+            width: unset;
+        }
+
+        button {
+            width: unset;
+        }
+    }
+
+    .nav-links {
+        display: flex;
+        gap: $gap * 5;
+        padding: 0;
+        order: 2;
+    }
+
+    .nav-links li {
+        display: inline-block;
+    }
+
+    .logo {
+        order: 1;
+    }
+
+    .button {
+        order: 3;
+    }
+
+}

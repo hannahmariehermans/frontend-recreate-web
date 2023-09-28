@@ -1,0 +1,59 @@
+header {
+    margin-top: map-get($space, 'xxl');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: calc(#{$gap} * 5);
+        margin-bottom: 40px;
+    }
+
+    .h-visual {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .h-visual img {
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.h-visual{
+    
+    margin: 0;
+    position: relative;
+
+    img {
+        display: block;
+        width:100%;
+    }
+
+    
+    &:after {
+        content: '';
+        height: 90%;
+        display: block;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background: linear-gradient(to top, #000, transparent);
+    }
+}
+
+@media screen and (min-width: map-get($sections, 7)) {
+    header .btn {
+        display: flex;
+        flex-direction: row;        
+        justify-content: center;
+    }
+}
+

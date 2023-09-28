@@ -1,0 +1,26 @@
+.testimonials{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .t-cards{
+        display: flex;
+        flex-direction: column;
+        gap: calc(#{$gap} * 7);
+    
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+
+
+@media screen and (min-width: map-get($sections, 7)) {
+    /* Styles for desktop and larger screens */
+    .testimonials .t-cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}

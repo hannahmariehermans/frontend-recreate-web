@@ -1,0 +1,39 @@
+.main{
+    text-align: center;
+
+    h1 {
+        margin-bottom: calc(#{$gap} * 6);
+
+        font-size:map-get($fontSizes, 'mheadline');
+        font-weight: map-get($fontWeights, 'light');
+
+        color: map-get($colors, 'text-light');
+      }
+      
+      h2 {
+        margin-bottom: calc(#{$gap} * 9);
+
+        font-size:map-get($fontSizes, 'subheading');
+        font-weight: map-get($fontWeights, 'light');
+        color: map-get($colors, 'text-light');
+        line-height: 30px; 
+      }
+}
+
+@media screen and (min-width: map-get($sections, 7)) {
+/* Styles for desktop and larger screens */
+
+    .main h1.desktop {
+      font-weight: map-get($fontWeights, 'bold');
+      font-size: map-get($fontSizes, 'headline');
+    }
+
+    .main h2{
+      margin: calc(#{$gap} * 9) 150px;
+    }
+
+    header .btn {
+      display: inline-block;
+    }
+
+}

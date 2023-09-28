@@ -1,0 +1,30 @@
+.contents{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+    .c-cards{
+        display: flex;
+        flex-direction: column;
+        gap: calc(#{$gap} * 7);
+    
+        align-items: center;
+        justify-content: center;
+    }
+
+    
+}
+
+@media screen and (min-width: map-get($sections, 7)) {
+/* Styles for desktop and larger screens */
+    .contents .c-cards{
+        display: flex;
+        flex-direction: row;
+        align-items: unset;
+    }
+
+
+}
+    

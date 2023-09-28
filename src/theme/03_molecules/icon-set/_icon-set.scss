@@ -1,0 +1,41 @@
+.partner-icons .partner-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .partner-icons .partner-list li {
+    width: calc(33.33% - 10px); /* Each item occupies 1/3 of the container width with some spacing */
+    margin-bottom: 20px; /* Spacing between rows */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+  .partner-icons .partner-list li.icon-p img {
+    width: auto;
+    height: 50px;
+  }
+  
+  .partner-icons .partner-list li.hidden {
+    display: none;
+}
+
+
+@media screen and (min-width: map-get($sections, 7)) {
+/* Styles for desktop and larger screens */
+
+  .partner-icons .partner-list {
+    flex-direction: row;
+    flex-wrap:unset;
+    gap: calc(#{$gap} * 10);
+
+    
+  }
+}
+  

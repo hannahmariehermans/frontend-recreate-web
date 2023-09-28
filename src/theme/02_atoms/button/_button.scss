@@ -1,0 +1,46 @@
+button{
+    border: none;
+    width:200px;
+    transition: all .25s;
+    color: map-get($colors, 'text-light');
+}
+
+.gallery button{
+    text-decoration: none;
+    color: map-get($colors, 'text-light');
+    font-size:map-get($fontSizes, 'button');
+}
+
+.button.primary{
+    background: map-get($colors, 'brand-1');
+    border: 1px solid map-get($colors, 'brand-1');
+    padding: map-get($space, 'md') map-get($space, 'xl');
+}
+
+.button.primary:hover{
+    background: lighten(map-get($colors, 'brand-1'), 10%);
+    transition: transform 0.3s ease;
+}
+
+.button.primary.large{
+    padding: map-get($space, 'lg') map-get($space, 'xxl');
+    width: auto;
+}
+
+
+.button.secondary{
+    background: map-get($colors, 'brand-0');
+    border: 1px solid map-get($colors, 'neutrals-0');
+    padding: map-get($space, 'md') map-get($space, 'xl');
+}
+
+.button.secondary:hover{
+    background: lighten(map-get($colors, 'brand-0'), 10%);
+    transition: transform 0.3s ease;
+}
+
+.button.secondary.large:not(nav button){
+    padding: map-get($space, 'lg') map-get($space, 'xxl');
+    width: auto;
+}
+

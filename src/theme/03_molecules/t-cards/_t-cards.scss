@@ -1,0 +1,27 @@
+.t-items{
+    display: flex;
+    flex-direction: column;
+    gap: calc(#{$gap} * 3);
+
+    border: 1px map-get($colors, 'neutrals-8') solid;
+    border-radius: $border-radius;
+
+    padding: map-get($space, 'lg');
+
+    .t-heading{
+        display: flex;
+        flex-direction: row;
+        gap: calc(#{$gap} * 5);
+    }
+
+    .t-heading img{
+        height: 100%;
+    }
+}
+
+.t-items:hover {
+    transform: scale(1.01);
+    transition: transform 0.3s ease;
+    background: lighten(map-get($colors, 'brand-0'), 2%);
+
+}

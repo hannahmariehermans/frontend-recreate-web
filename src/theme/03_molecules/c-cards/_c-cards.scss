@@ -1,0 +1,77 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: calc(#{$gap} * 12);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background: map-get($colors, 'neutrals-0');
+    border-radius: $border-radius;
+
+    /* top | right | bottom | left */
+    padding: map-get($space, 'xxl') map-get($space, 'md') map-get($space, 'lg') map-get($space, 'md') ;
+
+    p{
+        margin: map-get($space, 'md') map-get($space, 'lg');
+    }
+}
+
+.card:hover {
+    transform: scale(1.01);
+    transition: transform 0.3s ease;
+
+}
+  
+
+
+@media screen and (min-width: map-get($sections, 4)) {
+    /* Styles for desktop and larger screens */
+    
+    .card{
+        margin: map-get($space, 'xxl') (map-get($space, 'xs') * 6) map-get($space, 'lg') (map-get($space, 'xs') * 6);
+
+        h3{
+            font-size:map-get($fontSizes, 'title') *  1.1;
+        }    
+          
+        p{
+            font-size:map-get($fontSizes, 'title') *  1.1;
+        }
+
+        a{
+            font-size:map-get($fontSizes, 'title') *  0.8;
+        }
+
+        
+
+    }
+  
+}
+
+
+@media screen and (min-width: map-get($sections, 7)) {
+/* Styles for tablets and larger screens */
+
+    .card{
+        margin: 0;
+        justify-content: unset;
+        padding-bottom: 50px;
+
+        .c-heading{
+            order:1;
+        }
+
+        .c-visual{
+            order:3;
+        }
+    }
+
+    .c-visual{
+        width: 100%;
+    }
+    .c-visual img{
+        width: 100%;
+        height:auto;
+    }
+}

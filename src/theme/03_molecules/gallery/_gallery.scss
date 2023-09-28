@@ -1,0 +1,38 @@
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.img-gallery {
+    width: 300px;
+    height: 300px;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+@media screen and (min-width: map-get($sections, 4)) {
+
+    .gallery-row {
+        flex-direction: unset;
+    }
+
+    .img-gallery {
+        width: auto;
+        height: 300px;
+    }
+}

@@ -1,0 +1,53 @@
+nav {
+    .burger {
+        order: 2;
+        width: auto;
+    }
+}
+
+.burger {
+    display: block;
+    transform: rotate(180deg);
+}
+
+.burger div {
+    height: 4px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.burger .line1 {
+    width: 20px;
+}
+
+.burger .line2 {
+    width: 30px;
+}
+
+.burger .line3 {
+    width: 40px;
+}
+
+@media screen and (min-width: map-get($sections, 7)) {
+    .burger {
+        display: none;
+    }
+}
+
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 8px);
+    width: 40px;
+    background-color: white;
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -8px);
+    width: 40px;
+    background-color: white;
+}
